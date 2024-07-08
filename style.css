@@ -1,0 +1,155 @@
+/* 크기 색상은 변수로사용하기 */
+@font-face {
+  font-family: 'CookieRun-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 메세지 문구 */
+@font-face {
+  font-family: 'GyeonggiTitleM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  text-align: center;
+  background-color: #fff4d6;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hanrabong_game {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 500px;
+  background: url(image/background.png);
+  margin: auto;
+  border-radius: 20px;
+}
+
+.game_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.game_button {
+  width: 60px;
+  height: 60px;
+  background-color: #fac244;
+  border: solid 4px #000000;
+  border-radius: 15px;
+  font-size: 24px;
+  transition: transform 300ms ease-in; /*보통 빠르게*/
+}
+
+.game_timer {
+  width: 100px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: 'GmarketSansMedium';
+  margin-top: 12px;
+  border: 3px solid black;
+  border-radius: 15px;
+  font-size: 24px;
+  visibility: hidden;
+  user-select: none;
+  cursor: auto;
+}
+
+.game_score {
+  width: 50px;
+  height: 50px;
+  margin-top: 8px;
+  font-family: 'CookieRun-Regular';
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 145%; /*줄간격*/
+  color: #fff4d6;
+  background-color: #fd9f28;
+  border-radius: 50%;
+  /* border: 3px solid black; */
+  visibility: hidden;
+  user-select: none;
+  cursor: auto;
+}
+
+.game_button:hover {
+  transform: scale(1.1);
+}
+
+.game_field {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+/* 팝업 */
+
+.game_popUp {
+  width: 400px;
+  height: 140px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  /* background-color: #00000090; */
+  /* color: white; */
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  transform: translateY(-150%);
+}
+.popUp_refresh {
+  width: 60px;
+  height: 60px;
+  background-color: wheat;
+  border: 4px solid black;
+  border-radius: 50%;
+  font-size: 24px;
+}
+.popUp_message {
+  font-family: 'GyeonggiTitleM';
+  display: block;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.popUp-hide {
+  display: none;
+}
+
+.hanrabong,
+.yellow_hanrabong,
+.dolharbang {
+  transition: transform 100ms easy-in;
+}
+
+.hanrabong:hover,
+.yellow_hanrabong:hover,
+.dolharbang:hover {
+  transform: scale(1.1);
+}
